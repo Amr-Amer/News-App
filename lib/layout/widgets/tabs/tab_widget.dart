@@ -15,7 +15,7 @@ class TabWidget extends StatefulWidget {
 }
 
 class _TabWidgetState extends State<TabWidget> {
-//  int selectedIndex = 0;
+  // int selectedIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Consumer<CategoryDetailsViewModel>(
@@ -24,6 +24,7 @@ class _TabWidgetState extends State<TabWidget> {
             child: Column(
               children: [
                 TabBar(
+                  dividerColor: Colors.transparent,
                   onTap: (index) {
                     value.updateSelectedIndex(index);
                   },
@@ -32,7 +33,7 @@ class _TabWidgetState extends State<TabWidget> {
                   tabs: widget.sourcesList
                       .map((source) => TabItem(
                             source: source,
-                        isSelected: value.selectedIndex ==
+                            isSelected: value.selectedIndex ==
                                 widget.sourcesList.indexOf(source),
                           ))
                       .toList(),

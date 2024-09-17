@@ -22,8 +22,8 @@ NewsWidgetViewModel viewModel = NewsWidgetViewModel();
 class _NewsWidgetState extends State<NewsWidget> {
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
+    viewModel = NewsWidgetViewModel();
     viewModel.getNews(widget.source.id ?? '');
   }
 
@@ -58,7 +58,7 @@ class _NewsWidgetState extends State<NewsWidget> {
                 ),
               );
             } else {
-              return Expanded(
+              return Flexible(
                 child: ListView.builder(
                     itemBuilder: (context, index) {
                       return InkWell(

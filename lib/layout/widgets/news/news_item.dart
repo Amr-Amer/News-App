@@ -21,7 +21,7 @@ class NewsItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             ClipRRect(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(25),
               child: CachedNetworkImage(
                 imageUrl: news?.urlToImage ?? ' ',
                 progressIndicatorBuilder: (context, url, downloadProgress) =>

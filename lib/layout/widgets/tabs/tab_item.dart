@@ -20,7 +20,7 @@ class TabItem extends StatelessWidget {
           color: AppColors.primaryLightColor,
           width: 2,
         ),
-        borderRadius: BorderRadius.all(Radius.circular(15)),
+        borderRadius: const BorderRadius.all(Radius.circular(15)),
         color: isSelected ? AppColors.primaryLightColor : Colors.transparent,
       ),
       child: Text(

@@ -31,6 +31,7 @@ class CategoryDetailsViewModel extends ChangeNotifier {
   void getSource(String categoryId) async {
     sourcesList = null;
     errorMessage = null;
+    notifyListeners();
     var response = await sourceRepositoryContract.getSources(categoryId);
     try {
       if (response.status == 'error') {
