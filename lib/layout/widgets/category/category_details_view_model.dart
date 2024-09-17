@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:news/core/api/api_manager.dart';
 import 'package:news/model/SourceResponse.dart';
-import 'package:news/repository_source/data_source/source_data_source.dart';
-import 'package:news/repository_source/data_source/source_data_source_impl.dart';
-import 'package:news/repository_source/repository/source_repository.dart';
-import 'package:news/repository_source/repository/source_repository_impl.dart';
+
+import '../../../repository/repository_source/data_source/source_data_source.dart';
+import '../../../repository/repository_source/data_source/source_data_source_impl.dart';
+import '../../../repository/repository_source/repository/source_repository.dart';
+import '../../../repository/repository_source/repository/source_repository_impl.dart';
 
 class CategoryDetailsViewModel extends ChangeNotifier {
   late SourceRepositoryContract sourceRepositoryContract;

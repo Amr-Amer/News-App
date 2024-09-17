@@ -1,6 +1,7 @@
 import 'package:news/model/SourceResponse.dart';
-import 'package:news/repository_source/data_source/source_data_source.dart';
-import 'package:news/repository_source/repository/source_repository.dart';
+import 'package:news/repository/repository_source/repository/source_repository.dart';
+
+import '../data_source/source_data_source.dart';
 
 class SourceRepositoryImpl implements SourceRepositoryContract {
   SourceRemoteDataSource sourceRemoteDataSource;

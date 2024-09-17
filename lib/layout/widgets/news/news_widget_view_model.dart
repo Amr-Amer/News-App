@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:news/core/api/api_manager.dart';
 import 'package:news/model/NewsResponse.dart';
-import 'package:news/repository_news/data_source/news_data_source.dart';
-import 'package:news/repository_news/data_source/news_data_source_impl.dart';
-import 'package:news/repository_news/repository/news_repository.dart';
-import 'package:news/repository_news/repository/news_repository_impl.dart';
+
+import '../../../repository/repository_news/data_source/news_data_source.dart';
+import '../../../repository/repository_news/data_source/news_data_source_impl.dart';
+import '../../../repository/repository_news/repository/news_repository.dart';
+import '../../../repository/repository_news/repository/news_repository_impl.dart';
 
 class NewsWidgetViewModel extends ChangeNotifier {
   late NewsRepositoryContract newsRepositoryContract;
