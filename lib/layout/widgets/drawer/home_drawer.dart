@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news/core/theme/theme.dart';
+import 'package:news/constant/theme.dart';
 
 class HomeDrawer extends StatelessWidget {
   Function onSideMenuItemClick;

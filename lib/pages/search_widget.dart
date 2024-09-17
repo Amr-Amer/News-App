@@ -43,10 +43,10 @@ class NewsSearch extends SearchDelegate {
       future: apiManager.getNewsBySourceId(searchKeyword: query),
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.waiting) {
-          return Center(child: CircularProgressIndicator());
+          return const Center(child: CircularProgressIndicator());
         }
         if (snapshot.hasError) {
-          return Center(child: Text("something went wrong"));
+          return const Center(child: Text("something went wrong"));
         }
         var articls = snapshot.data?.articles ?? [];
         return Expanded(

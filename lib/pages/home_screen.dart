@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:news/core/theme/theme.dart';
+import 'package:news/constant/theme.dart';
 import 'package:news/layout/widgets/category/category_details.dart';
 import 'package:news/layout/widgets/category/category_fragment.dart';
 import 'package:news/layout/widgets/drawer/home_drawer.dart';
-import 'package:news/layout/widgets/tabs/settings.dart';
+import 'package:news/layout/widgets/tabs/settings/settings.dart';
 import 'package:news/model/category.dart';
 import 'package:news/pages/search_widget.dart';
+
+import '../constant/assets.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = 'HomeScreen';
@@ -22,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
         Container(
           color: MyTheme.whiteColor,
           child: Image.asset(
-            'assets/images/main_background.png',
+            Assets.backgroundImage,
             width: double.infinity,
             height: double.infinity,
             fit: BoxFit.cover,
@@ -48,7 +50,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     showSearch(context: context, delegate: NewsSearch());
                   });
                 },
-                icon: Icon(Icons.search),
+                icon: const Icon(Icons.search),
               ),
             ],
           ),

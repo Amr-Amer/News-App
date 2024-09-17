@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news/core/theme/theme.dart';
+import 'package:news/constant/theme.dart';
 import 'package:news/model/SourceResponse.dart';
 
 class TabItem extends StatelessWidget {
@@ -12,8 +12,8 @@ class TabItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 12),
-      padding: EdgeInsets.symmetric(vertical: 5, horizontal: 12),
+      margin: const EdgeInsets.only(top: 12),
+      padding: const EdgeInsets.symmetric(vertical: 5, horizontal: 12),
       decoration: BoxDecoration(
         border: Border.all(
           color: MyTheme.primaryLightColor,

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news/core/api/api_manager.dart';
-import 'package:news/core/theme/theme.dart';
+import 'package:news/constant/theme.dart';
 import 'package:news/layout/widgets/category/category_details_view_model.dart';
 import 'package:news/layout/widgets/tabs/tab_widget.dart';
 import 'package:news/model/category.dart';
