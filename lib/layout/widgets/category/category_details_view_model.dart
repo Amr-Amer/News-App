@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:news/core/api/api_manager.dart';
 import 'package:news/model/SourceResponse.dart';
 
+import '../../../constant/strings.dart';
 import '../../../repository/repository_source/data_source/source_data_source.dart';
 import '../../../repository/repository_source/data_source/source_data_source_impl.dart';
 import '../../../repository/repository_source/repository/source_repository.dart';
@@ -38,7 +39,7 @@ class CategoryDetailsViewModel extends ChangeNotifier {
         sourcesList = response.sources;
       }
     } catch (e) {
-      errorMessage = 'Error Loading  List Sources';
+      errorMessage = Strings.instance.errorLoadingListSources;
     }
     notifyListeners();
   }

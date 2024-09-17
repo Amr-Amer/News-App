@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news/constant/strings.dart';
 import 'package:news/layout/widgets/category/category_item.dart';
 import 'package:news/model/category.dart';
 
@@ -15,7 +16,7 @@ class CategoryFragment extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Text(
-            'Pick your category \n of interest',
+            Strings.instance.pickYourCategoryOfInterest,
             style: Theme.of(context).textTheme.titleMedium,
           ),
           const SizedBox(

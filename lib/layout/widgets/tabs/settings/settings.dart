@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:news/constant/assets.dart';
-import 'package:news/constant/theme.dart';
 import 'package:news/layout/widgets/tabs/settings/languge_bottom_sheet.dart';
 
+import '../../../../constant/colors.dart';
 import '../../../../constant/strings.dart';
 
 class SettingsTab extends StatefulWidget {
@@ -20,7 +20,7 @@ class _HomeScreenState extends State<SettingsTab> {
     return Stack(
       children: [
         Container(
-          color: MyTheme.whiteColor,
+          color: AppColors.whiteColor,
           child: Image.asset(
             Assets.backgroundImage,
             width: double.infinity,

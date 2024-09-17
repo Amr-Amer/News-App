@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:news/constant/theme.dart';
+
+import '../../../constant/colors.dart';
+import '../../../constant/strings.dart';
 
 class HomeDrawer extends StatelessWidget {
   Function onSideMenuItemClick;
   static const int categories = 1;
   static const int settings = 2;
-  HomeDrawer({required this.onSideMenuItemClick});
+
+  HomeDrawer({super.key, required this.onSideMenuItemClick});
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -14,9 +17,9 @@ class HomeDrawer extends StatelessWidget {
           width: double.infinity,
           padding: EdgeInsets.symmetric(
               vertical: MediaQuery.of(context).size.height * 0.1),
-          color: MyTheme.primaryLightColor,
+          color: AppColors.primaryLightColor,
           child: Text(
-            'News App!',
+            Strings.instance.newsApp,
             style: Theme.of(context).textTheme.titleLarge,
             textAlign: TextAlign.center,
           ),
@@ -34,7 +37,7 @@ class HomeDrawer extends StatelessWidget {
                   width: 10,
                 ),
                 Text(
-                  'Categories',
+                  Strings.instance.categories,
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
               ],
@@ -54,7 +57,7 @@ class HomeDrawer extends StatelessWidget {
                   width: 10,
                 ),
                 Text(
-                  'Settings',
+                  Strings.instance.settings,
                   style: Theme.of(context).textTheme.titleMedium,
                 ),
               ],

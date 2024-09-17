@@ -3,6 +3,8 @@ import 'package:news/core/api/api_manager.dart';
 import 'package:news/layout/widgets/news/news_item.dart';
 import 'package:news/model/NewsResponse.dart';
 
+import '../constant/strings.dart';
+
 class NewsSearch extends SearchDelegate {
   late Future<NewsResponse?> getNewsDataModel;
   late ApiManager apiManager;
@@ -46,7 +48,7 @@ class NewsSearch extends SearchDelegate {
           return const Center(child: CircularProgressIndicator());
         }
         if (snapshot.hasError) {
-          return const Center(child: Text("something went wrong"));
+          return Center(child: Text(Strings.instance.somethingWentWrong));
         }
         var articls = snapshot.data?.articles ?? [];
         return Expanded(
@@ -65,8 +67,8 @@ class NewsSearch extends SearchDelegate {
 
   @override
   Widget buildSuggestions(BuildContext context) {
-    return const Center(
-      child: Text('Search'),
+    return Center(
+      child: Text(Strings.instance.search),
     );
   }
 }

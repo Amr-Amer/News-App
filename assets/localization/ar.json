@@ -2,5 +2,20 @@
   "settings": "الأعدادات",
   "language": "اللغه",
   "english": "الأنجليزيه",
-  "arabic": "العربيه"
+  "arabic": "العربيه",
+  "newsApp": "تطبيق الأخبار",
+  "categories": "الفئات",
+  "search": "بحث",
+  "somethingWentWrong": "حدث خطأ ما",
+  "sports": "رياضة",
+  "general": "عام",
+  "health": "صحة",
+  "business": "أعمال تجارية",
+  "entertainment": "تسلية",
+  "science": "علوم",
+  "tryAgain": "حاول مرة أخرى",
+  "pickYourCategoryOfInterest": "اختر فئة اهتمامك",
+  "viewFullArticle": "عرض المقال بالكامل",
+  "errorLoadingListSources": "خطأ في تحميل قائمة المصادر",
+  "errorLoadingNewsList": "خطأ في تحميل قائمة الأخبار"
 }

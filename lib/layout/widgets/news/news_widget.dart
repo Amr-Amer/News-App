@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:news/constant/theme.dart';
+import 'package:news/constant/colors.dart';
 import 'package:news/layout/widgets/news/news_details.dart';
 import 'package:news/layout/widgets/news/news_item.dart';
 import 'package:news/layout/widgets/news/news_widget_view_model.dart';
 import 'package:news/model/SourceResponse.dart';
 import 'package:provider/provider.dart';
+
+import '../../../constant/strings.dart';
 
 class NewsWidget extends StatefulWidget {
   Source source;
@@ -45,14 +47,14 @@ class _NewsWidgetState extends State<NewsWidget> {
                     onPressed: () {
                       viewModel.getNews(widget.source.id ?? '');
                     },
-                    child: const Text('Try again'),
+                    child: Text(Strings.instance.tryAgain),
                   ),
                 ],
               );
             } else if (viewModel.newsList == null) {
               return Center(
                 child: CircularProgressIndicator(
-                  color: MyTheme.primaryLightColor,
+                  color: AppColors.primaryLightColor,
                 ),
               );
             } else {

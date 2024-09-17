@@ -13,8 +13,8 @@ class CategoryItme extends StatelessWidget {
       decoration: BoxDecoration(
           color: category.color,
           borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(25),
-            topRight: Radius.circular(25),
+            topLeft: const Radius.circular(25),
+            topRight: const Radius.circular(25),
             bottomLeft: Radius.circular(
               index % 2 == 0 ? 25 : 0,
             ),

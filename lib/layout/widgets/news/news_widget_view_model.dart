@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:news/core/api/api_manager.dart';
 import 'package:news/model/NewsResponse.dart';
 
+import '../../../constant/strings.dart';
 import '../../../repository/repository_news/data_source/news_data_source.dart';
 import '../../../repository/repository_news/data_source/news_data_source_impl.dart';
 import '../../../repository/repository_news/repository/news_repository.dart';
@@ -36,7 +37,7 @@ class NewsWidgetViewModel extends ChangeNotifier {
         newsList = response!.articles;
       }
     } catch (e) {
-      errorMessage = 'Erorr Loading News  List';
+      errorMessage = Strings.instance.errorLoadingNewsList;
     }
     notifyListeners();
   }

@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:news/constant/theme.dart';
 import 'package:news/layout/widgets/category/category_details_view_model.dart';
 import 'package:news/layout/widgets/tabs/tab_widget.dart';
 import 'package:news/model/category.dart';
 import 'package:provider/provider.dart';
 
+import '../../../constant/colors.dart';
+import '../../../constant/strings.dart';
+
 class CategoryDetails extends StatefulWidget {
   static const String routeName = 'Category Details';
   CategoryDM category;
 
-  CategoryDetails({required this.category});
+  CategoryDetails({super.key, required this.category});
 
   @override
   State<CategoryDetails> createState() => _HomeScreenState();
@@ -45,14 +47,14 @@ class _HomeScreenState extends State<CategoryDetails> {
                     viewModel.getSource(widget.category.id);
                     setState(() {});
                   },
-                  child: const Text('Try again'),
+                  child: Text(Strings.instance.tryAgain),
                 ),
               ],
             );
           } else if (viewModel.sourcesList == null) {
             return Center(
               child: CircularProgressIndicator(
-                color: MyTheme.primaryLightColor,
+                color: AppColors.primaryLightColor,
               ),
             );
           } else {

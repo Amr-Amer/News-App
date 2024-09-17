@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:news/constant/theme.dart';
 import 'package:news/layout/widgets/category/category_details.dart';
 import 'package:news/layout/widgets/category/category_fragment.dart';
 import 'package:news/layout/widgets/drawer/home_drawer.dart';
@@ -8,6 +7,8 @@ import 'package:news/model/category.dart';
 import 'package:news/pages/search_widget.dart';
 
 import '../constant/assets.dart';
+import '../constant/colors.dart';
+import '../constant/strings.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String routeName = 'HomeScreen';
@@ -22,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return Stack(
       children: [
         Container(
-          color: MyTheme.whiteColor,
+          color: AppColors.whiteColor,
           child: Image.asset(
             Assets.backgroundImage,
             width: double.infinity,
@@ -35,9 +36,9 @@ class _HomeScreenState extends State<HomeScreen> {
           appBar: AppBar(
             title: Text(
               selectedMenuItem == HomeDrawer.settings
-                  ? 'Settings'
+                  ? Strings.instance.settings
                   : selectCategory == null
-                      ? 'News App'
+                      ? Strings.instance.newsApp
                       : selectCategory!.title,
               style: Theme.of(context).textTheme.titleLarge,
             ),

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:news/constant/theme.dart';
+
+import '../constant/assets.dart';
+import '../constant/colors.dart';
+import '../constant/strings.dart';
 
 class CategoryDM {
   String id;
@@ -16,35 +19,35 @@ class CategoryDM {
   static List<CategoryDM> getCategories() {
     return [
       CategoryDM(
-          title: 'Sports',
-          imagePath: 'assets/images/ball.png',
+          title: Strings.instance.sports,
+          imagePath: Assets.sportsImage,
           id: 'sports',
-          color: MyTheme.redColor),
+          color: AppColors.redColor),
       CategoryDM(
-          title: 'General',
-          imagePath: 'assets/images/Politics.png',
+          title: Strings.instance.general,
+          imagePath: Assets.generalImage,
           id: 'general',
-          color: MyTheme.blueColor),
+          color: AppColors.blueColor),
       CategoryDM(
-          title: 'Health',
-          imagePath: 'assets/images/health.png',
+          title: Strings.instance.health,
+          imagePath: Assets.healthImage,
           id: 'health',
-          color: MyTheme.pinkColor),
+          color: AppColors.pinkColor),
       CategoryDM(
-          title: 'Business',
-          imagePath: 'assets/images/bussines.png',
+          title: Strings.instance.business,
+          imagePath: Assets.businessImage,
           id: 'business',
-          color: MyTheme.brownColor),
+          color: AppColors.brownColor),
       CategoryDM(
-          title: 'Entertainment',
-          imagePath: 'assets/images/environment.png',
+          title: Strings.instance.entertainment,
+          imagePath: Assets.entertainmentImage,
           id: 'entertainment',
-          color: MyTheme.blueColor),
+          color: AppColors.blueColor),
       CategoryDM(
-          title: 'Science',
-          imagePath: 'assets/images/science.png',
+          title: Strings.instance.science,
+          imagePath: Assets.scienceImage,
           id: 'science',
-          color: MyTheme.yellowColor),
+          color: AppColors.yellowColor),
     ];
   }
 }

@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:news/constant/theme.dart';
+import 'package:news/constant/colors.dart';
 import 'package:news/model/NewsDataModel.dart';
 import 'package:news/model/NewsResponse.dart';
 
@@ -27,7 +27,7 @@ class NewsItem extends StatelessWidget {
                 progressIndicatorBuilder: (context, url, downloadProgress) =>
                     Center(
                         child: CircularProgressIndicator(
-                            backgroundColor: MyTheme.primaryLightColor,
+                            backgroundColor: AppColors.primaryLightColor,
                             value: downloadProgress.progress)),
                 errorWidget: (context, url, error) => const Icon(Icons.error),
               ),
@@ -38,7 +38,7 @@ class NewsItem extends StatelessWidget {
             Text(
               news?.author ?? '',
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                    color: MyTheme.greyColor,
+                    color: AppColors.greyColor,
                   ),
             ),
             const SizedBox(
@@ -56,7 +56,7 @@ class NewsItem extends StatelessWidget {
               textAlign: TextAlign.end,
               style: Theme.of(context).textTheme.titleMedium!.copyWith(
                     // Assuming titleSmall is not available
-                    color: MyTheme.greyColor,
+                    color: AppColors.greyColor,
                   ),
             ),
           ],

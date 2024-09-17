@@ -3,8 +3,11 @@ import 'dart:core';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:news/constant/theme.dart';
 import 'package:news/pages/web_view.dart';
+
+import '../../../constant/assets.dart';
+import '../../../constant/colors.dart';
+import '../../../constant/strings.dart';
 
 class NewsDatails extends StatelessWidget {
   static const String routeName = 'NewsDetails';
@@ -28,9 +31,9 @@ class NewsDatails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(children: [
       Container(
-        color: MyTheme.whiteColor,
+        color: AppColors.whiteColor,
         child: Image.asset(
-          'assets/images/main_background.png',
+          Assets.backgroundImage,
           width: double.infinity,
           height: double.infinity,
           fit: BoxFit.cover,
@@ -40,7 +43,7 @@ class NewsDatails extends StatelessWidget {
           backgroundColor: Colors.transparent,
           appBar: AppBar(
             title: Text(
-              'News App',
+              Strings.instance.newsApp,
               style: Theme.of(context).textTheme.titleLarge,
             ),
           ),
@@ -57,7 +60,7 @@ class NewsDatails extends StatelessWidget {
                       progressIndicatorBuilder:
                           (context, url, downloadProgress) => Center(
                               child: CircularProgressIndicator(
-                                  backgroundColor: MyTheme.primaryLightColor,
+                                  backgroundColor: AppColors.primaryLightColor,
                                   value: downloadProgress.progress)),
                       errorWidget: (context, url, error) =>
                           const Icon(Icons.error),
@@ -76,7 +79,7 @@ class NewsDatails extends StatelessWidget {
                   Text(
                     author ?? '',
                     style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                          color: MyTheme.greyColor,
+                          color: AppColors.greyColor,
                         ),
                   ),
                   const SizedBox(height: 3),
@@ -92,7 +95,7 @@ class NewsDatails extends StatelessWidget {
                     textAlign: TextAlign.end,
                     style: Theme.of(context).textTheme.titleMedium!.copyWith(
                           // Assuming titleSmall is not available
-                          color: MyTheme.greyColor,
+                          color: AppColors.greyColor,
                         ),
                   ),
                   const SizedBox(
@@ -101,7 +104,7 @@ class NewsDatails extends StatelessWidget {
                   Text(
                     description ?? '',
                     style: Theme.of(context).textTheme.titleSmall!.copyWith(
-                          color: MyTheme.greyColor,
+                          color: AppColors.greyColor,
                         ),
                   ),
                   const SizedBox(
@@ -110,8 +113,8 @@ class NewsDatails extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      const Text(
-                        'View Full Article',
+                      Text(
+                        Strings.instance.viewFullArticle,
                         textAlign: TextAlign.end,
                       ),
                       IconButton(

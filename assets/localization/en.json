@@ -2,5 +2,20 @@
   "settings": "Settings",
   "language": "Language",
   "english": "English",
-  "arabic": "Arabic"
+  "arabic": "Arabic",
+  "newsApp": " News App",
+  "categories": "Categories",
+  "search": "Search",
+  "somethingWentWrong": "Something Went Wrong",
+  "sports": "Sports",
+  "general": "General",
+  "health": "Health",
+  "business": "Business",
+  "entertainment": "Entertainment",
+  "science": "Science",
+  "tryAgain": "Try Again",
+  "pickYourCategoryOfInterest": "Pick your category of interest",
+  "viewFullArticle": "View Full Article",
+  "errorLoadingListSources": "Error Loading List Sources",
+  "errorLoadingNewsList": "Error Loading News List"
 }

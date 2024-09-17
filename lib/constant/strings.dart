@@ -9,7 +9,7 @@ class Strings {
 
   String get newsApp => 'newsApp'.tr();
 
-  String get categories => 'Categories'.tr();
+  String get categories => 'categories'.tr();
 
   String get search => 'search'.tr();
 
@@ -38,4 +38,8 @@ class Strings {
   String get english => 'english'.tr();
 
   String get arabic => 'arabic'.tr();
+
+  String get errorLoadingListSources => 'errorLoadingListSources'.tr();
+
+  String get errorLoadingNewsList => 'errorLoadingNewsList'.tr();
 }
